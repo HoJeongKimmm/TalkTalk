@@ -160,9 +160,10 @@ header .main_menu .dropdown-content li a:hover {
 }
 
 .card-header {
+    font-family: 'Freesentation-9Black', sans-serif; 
     padding: 30px; /* 패딩을 1.5배로 키움 */
     text-align: center;
-    background-color: #9c27b0;
+    background-color: #be7fc9;
     color: white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -256,6 +257,7 @@ header .main_menu .dropdown-content li a:hover {
 }
 
 .btn {
+    font-family: 'Pretendard-Regular', sans-serif; 
     position: absolute;
     right: 0;
     bottom: 0;
@@ -264,6 +266,7 @@ header .main_menu .dropdown-content li a:hover {
 }
 
 .btn a {
+    font-family: 'Pretendard-Regular', sans-serif; 
     padding: 15px; /* 패딩을 1.5배로 키움 */
     background-color: tomato;
     color: #fff;
@@ -276,6 +279,7 @@ header .main_menu .dropdown-content li a:hover {
 }
 
 .card-write input, textarea {
+    font-family: 'Pretendard-Regular', sans-serif;
     margin-left: 15px; /* 마진을 1.5배로 키움 */
     padding: 15px; /* 패딩을 1.5배로 키움 */
     border: 1px solid #999;
@@ -285,51 +289,64 @@ header .main_menu .dropdown-content li a:hover {
 }
 
 .card-write input[type="file"] {
+    font-family: 'Pretendard-Regular', sans-serif;
     border: none;
     box-shadow: none;
-    padding: 15px; /* 패딩을 1.5배로 키움 */
-    margin-left: 60px; /* 마진을 1.5배로 키움 */
+    padding: 15px;
+    margin-left: 60px;
 }
 
 .card-write .myinfo {
     display: flex;
     justify-content: space-between;
+    width: 50%;
 }
 
 .card-write .title-w input[type="text"] {
-    margin-top: 30px; /* 마진을 1.5배로 키움 */
-    margin-bottom: 30px; /* 마진을 1.5배로 키움 */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: calc(100% - 30px); /* 너비를 맞추기 위해 조정 */
 }
 
-.card-write .msg textarea {
-    min-height: 300px; /* 높이를 1.5배로 키움 */
-    max-height: 300px; /* 높이를 1.5배로 키움 */
+.card-write .msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-write .msg textarea#content {
+    min-height: 300px;
+    max-height: 300px;
+    width: calc(100% - 30px); /* 입력 필드 너비와 일치하도록 설정 */
     box-shadow: inset 3px 3px 10px #e6e6e6;
     vertical-align: top;
 }
 
-.btn-w a {
-    background-color: tomato;
-    padding: 15px; /* 패딩을 1.5배로 키움 */
-    color: #fff;
-    border-radius: 10px;
+.card-write .msg input[type="file"] {
+    width: calc(100% - 30px); /* 입력 필드 너비와 일치하도록 설정 */
+    margin-top: 10px; /* 파일 입력 필드와 텍스트 영역 간격 추가 */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px; /* 패딩을 1.5배로 키움 */
+    margin-right: 15px; /* 오른쪽 여백 추가 */
+}
 
-    .main-content {
-        flex-direction: column;
-    }
+.btn button {
+    font-family: 'Pretendard-Regular', sans-serif;
+    padding: 15px 30px; /* 패딩을 1.5배로 키움 */
+    background-color: #be7fc9; /* 연한 보라색 */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px; /* 버튼 글씨 크기 키움 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    .header-content, .main-content, .footer {
-        padding: 10px;
-    }
-
-    .header-content h1, .header-content p {
-        margin-left: 0;
-    }
+.btn button:hover {
+    background-color: #a75ca0; /* 호버 시 조금 더 어두운 보라색 */
 }

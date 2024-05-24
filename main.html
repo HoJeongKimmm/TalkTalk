@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEARTIST</title>
+    <title>TALKTALK</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/9d9d67d672.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style_main.css">
@@ -16,13 +16,20 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-          // 로그인 상태 확인
-          if (localStorage.getItem('email')) {
-            // 로그인 상태라면 "My Page" 버튼 표시
-            $('.signin').replaceWith('<a href="mypage.html" class="mypage">My Page</a>');
-          }
+            // 로그인 상태 확인
+            if (localStorage.getItem('email')) {
+                // 로그인 상태라면 "My Page" 버튼 표시
+                const signinElement = document.querySelector('.signin');
+                if (signinElement) {
+                    const myPageElement = document.createElement('a');
+                    myPageElement.href = 'mypage.html';
+                    myPageElement.className = 'mypage';
+                    myPageElement.textContent = 'My Page';
+                    signinElement.parentNode.replaceChild(myPageElement, signinElement);
+                }
+            }
         });
-        </script>
+    </script>
 </head>
 <body>
     <header>
@@ -50,13 +57,9 @@
                     </ul>
                 </li>
                 <li><a href="./about.html" id="about">About Us</a></li>
-                <li><a href="./login_sign.html" id="prof">Sign In</a></li>
+                <li><a href="./login_sign.html" id="prof" class="signin">Sign In</a></li>
             </ul>
         </nav>
-        
-
-
-
     </header>
     
     <aside>
@@ -80,7 +83,7 @@
                 element.textContent = englishText;
             }
         }
-        </script>
+    </script>
     
     <section>
         <figure class="main_banner">

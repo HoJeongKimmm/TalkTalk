@@ -11,19 +11,17 @@ $(document).ready(function() {
 
     async function loadBoard(language) {
         $('#boardTitle').text(`${language.charAt(0).toUpperCase() + language.slice(1)} 게시판`);
-
-        // 비동기로 게시판 데이터 로드 (서버와 연동 필요)
+    
         const posts = await fetchPosts(language);
-        
         const contentList = $('#contentList');
         contentList.empty();
-
+    
         const fragment = $(document.createDocumentFragment());
         posts.forEach(post => {
             fragment.append(`
                 <div class="content-box">
                     <div class="check"><input type="checkbox" name="" id=""></div>
-                    <div class="title"><a href="/view">${post.title}</a></div>
+                    <div class="title"><a href="/view.html?id=${post.id}">${post.title}</a></div>
                     <div class="author">${post.author}</div>
                     <div class="delete"><button class="deletePostButton" data-postid="${post.id}">X</button></div>
                 </div>

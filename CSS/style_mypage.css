@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WAGURITTF';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+/* Navbar 스타일 */
+header {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.main_menu {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.main_menu h1 {
+    margin: 0;
+}
+
+.main_menu h1 a {
+    font-family: 'Freesentation-9Black', sans-serif;
+    font-size: 24px;
+    color: #0159B1;
+}
+
+#gnb {
+    display: flex;
+    gap: 20px;
+}
+
+#gnb li {
+    position: relative;
+}
+
+#gnb li a {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+#gnb li a:hover {
+    color: #0159B1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: #666;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #0159B1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mypage {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: 16px;
+    color: #666;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.mypage:hover {
+    color: #0159B1;
+}
+
+/* Header 스타일 */
+.header-content {
+    width: 100%;
+    height: 200px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content .text-content {
+    font-family: 'Freesentation-9Black', sans-serif;
+}
+
+.header-content .text-content h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.header-content .text-content p {
+    font-size: 20px;
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+/* Main Content 스타일 */
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.main-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 프로필 섹션 스타일 */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#userName {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Freesentation-9Black', sans-serif;
+}
+
+/* Footer 스타일 */
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* 로그아웃 버튼 스타일 */
+#logoutButton {
+    background-color: #9c27b0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'WAGURITTF', Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+#logoutButton:hover {
+    background-color: #7b1fa2;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
