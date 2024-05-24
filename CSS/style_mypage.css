@@ -14,13 +14,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'WAGURITTF';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/WAGURITTF.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -53,7 +46,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 40px; /* 위아래 2배로 증가 */
+    height: 120px; /* nav 높이 두 배로 증가 */
 }
 
 .main_menu h1 {
@@ -61,7 +55,7 @@ header {
 }
 
 .main_menu h1 a {
-    font-family: 'Freesentation-9Black', sans-serif;
+    font-family: 'Pretendard-Regular', sans-serif;
     font-size: 24px;
     color: #0159B1;
 }
@@ -211,7 +205,7 @@ header {
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
-    font-family: 'WAGURITTF', Arial, sans-serif;
+    font-family: 'Pretendard-Regular', Arial, sans-serif;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
