@@ -190,17 +190,30 @@ header .main_menu .dropdown-content li a:hover {
     color: #333;
 }
 
-.footer {
+footer {
     width: 100%;
-    height: 80px;
-    background-color: #f3f3f3;
+    height: 50px;
+    clear: both;
+    background-color: #F3F3F3;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+footer .inner {
+    width: 1180px;
+    margin: 0 auto;
     text-align: center;
-    padding: 20px 0;
-    font-family: 'Pretendard-Regular', sans-serif;
-    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5px;
     color: #666;
 }
 
-.footer p {
-    margin: 5px 0;
+footer .inner #tel {
+    padding-top: 15px;
+    margin-bottom: 0;  
+}
+
+footer .inner #copyright {
+    margin-top: 2px;
 }
