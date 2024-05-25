@@ -26,6 +26,11 @@ $(document).ready(function() {
         }
     }
 
+    function getNow() {
+        var now = new Date();
+        return now.getFullYear() + '/' + (now.getMonth() + 1) + '/' + now.getDate() + ' ' + now.getHours() + ':' + now.getMinutes();
+    }
+
     // 새로운 코멘트 등록
     function addNewComment() {
         var comment = {
@@ -53,7 +58,7 @@ $(document).ready(function() {
     commentSaveBtn.click(addNewComment);
 
     function getCommentTemplate(seq, content, date) {
-        return '<li class="comment-item"><div class="comment-num">댓글' + seq + '</div><div class="comment-content">' + content + '</div><div class="comment-date">' + date + '</div><button class="btn btn-remove-comment" data-index="' + seq + '">삭제</button></li>';
+        return '<li class="comment-item"><div class="comment-num">댓글 ' + seq + '</div><div class="comment-content">' + content + '</div><div class="comment-date">' + date + '</div><button class="btn btn-remove-comment" data-index="' + seq + '">삭제</button></li>';
     }
 
     // 코멘트 렌더링
@@ -84,4 +89,8 @@ $(document).ready(function() {
 
     // 초기 렌더링
     renderComment();
+
+    function saveToStorage(key, data) {
+        localStorage.setItem(key, JSON.stringify(data));
+    }
 });
