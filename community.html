@@ -8,7 +8,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/9d9d67d672.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS/style_study.css">
-    <script defer src="js/study.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap');
@@ -47,7 +46,7 @@
     </header>
     
     <section>
-        <h2 id="board-title">Welcome to the Board</h2><br>
+        <h2 id="board-title">커뮤니티</h2><br>
         
         <table>
             <thead>
@@ -78,7 +77,7 @@
         </div>
     </footer>
 
-    <!-- <script>
+    <script>
         // URL에서 쿼리 파라미터를 추출하는 함수
         function getQueryParams() {
             const params = {};
@@ -91,38 +90,35 @@
             return params;
         }
 
-        // 언어별 게시판 제목 설정
-        function setBoardTitle(lang) {
+        // 커뮤니티 항목별 게시판 제목 설정
+        function setBoardTitle(category) {
             const boardTitle = document.getElementById('board-title');
-            switch (lang) {
-                case 'english':
-                    boardTitle.textContent = 'Welcome to the English Board';
+            switch (category) {
+                case 'free':
+                    boardTitle.textContent = '자유게시판';
                     break;
-                case 'chinese':
-                    boardTitle.textContent = '欢迎来到中文板块';
+                case 'book_sale':
+                    boardTitle.textContent = '책 사고팔기';
                     break;
-                case 'japanese':
-                    boardTitle.textContent = '日本語の掲示板へようこそ';
-                    break;
-                case 'spanish':
-                    boardTitle.textContent = 'Bienvenido al tablero en español';
+                case 'study_recruit':
+                    boardTitle.textContent = '스터디 모집';
                     break;
                 default:
-                    boardTitle.textContent = 'Welcome to the Board';
+                    boardTitle.textContent = '커뮤니티';
             }
         }
 
         // 쿼리 파라미터를 가져와서 제목 설정
         const params = getQueryParams();
-        if (params.lang) {
-            setBoardTitle(params.lang);
+        if (params.category) {
+            setBoardTitle(params.category);
         }
 
         // 샘플 HTML 페이지로 이동하는 함수
         function navigateToSample(id) {
             const basePath = 'file:///Users/kimhojeong/Documents/GitHub/TalkTalk/';
-            window.location.href = `${basePath}sample.html?id=${id}`;
+            window.location.href = `${basePath}sample2.html?id=${id}`;
         }
-    </script> -->
+    </script>
 </body>
 </html>
