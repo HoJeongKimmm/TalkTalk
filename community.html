@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TALKTALK</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9d9d67d672.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style_study.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Roboto&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main_menu">
+            <h1>
+                <a href="./main.html">TALKTALK</a>
+            </h1>
+            <ul id="gnb">
+                <li><a href="./main.html" id="home">Home</a></li>
+                <li class="dropdown">
+                    <a href="./main.html" id="lang">Study</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./study.html?lang=english">English</a></li>
+                        <li><a href="./study.html?lang=chinese">Chinese</a></li>
+                        <li><a href="./study.html?lang=japanese">Japanese</a></li>
+                        <li><a href="./study.html?lang=spanish">Spanish</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="./community.html?category=community" id="com">Community</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./community.html?category=free">자유게시판</a></li>
+                        <li><a href="./community.html?category=book_sale">책 사고팔기</a></li>
+                        <li><a href="./community.html?category=study_recruit">스터디 모집</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html" id="about">About Us</a></li>
+                <li><a href="./login_sign.html" id="prof" class="signin">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2 id="board-title">커뮤니티</h2><br>
+        
+        <table>
+            <thead>
+                <tr><th id="no">NO.</th><th id="title">TITLE</th><th id="writer">WRITER</th><th id="date">DATE</th><th id="views">VIEWS</th></tr>
+            </thead>
+            <tbody>
+                <tr><td id="no">8</td><td id="title"><a href="#" onclick="navigateToSample(8)">SAMPLE POSTING # 8</a></td><td id="writer">User1</td><td id="date">2024/06/12</td><td id="views">11</td></tr>
+                <tr><td id="no">7</td><td id="title"><a href="#" onclick="navigateToSample(7)">SAMPLE POSTING # 7</a></td><td id="writer">User2</td><td id="date">2024/06/12</td><td id="views">15</td></tr>
+                <tr><td id="no">6</td><td id="title"><a href="#" onclick="navigateToSample(6)">SAMPLE POSTING # 6</a></td><td id="writer">User3</td><td id="date">2024/06/12</td><td id="views">13</td></tr>
+                <tr><td id="no">5</td><td id="title"><a href="#" onclick="navigateToSample(5)">SAMPLE POSTING # 5</a></td><td id="writer">User4</td><td id="date">2024/06/12</td><td id="views">22</td></tr>
+                <tr><td id="no">4</td><td id="title"><a href="#" onclick="navigateToSample(4)">SAMPLE POSTING # 4</a></td><td id="writer">User5</td><td id="date">2024/06/12</td><td id="views">45</td></tr>
+                <tr><td id="no">3</td><td id="title"><a href="#" onclick="navigateToSample(3)">SAMPLE POSTING # 3</a></td><td id="writer">User6</td><td id="date">2024/06/12</td><td id="views">24</td></tr>
+                <tr><td id="no">2</td><td id="title"><a href="#" onclick="navigateToSample(2)">SAMPLE POSTING # 2</a></td><td id="writer">User7</td><td id="date">2024/06/12</td><td id="views">12</td></tr>
+                <tr><td id="no">1</td><td id="title"><a href="#" onclick="navigateToSample(1)">SAMPLE POSTING # 1</a></td><td id="writer">User8</td><td id="date">2024/06/12</td><td id="views">7</td></tr>
+            </tbody>
+        </table>
+        <div id="buttons_bot">
+            <div id="button_cover"><a href="./write.html" id="write_button">WRITE NEW</a></div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="inner">
+            <br><br>
+            <p>운영시간: 월 ~ 금 AM 9:00 ~ PM 7:00 | 점심시간: PM12:00 ~ PM 1:00</p>
+            <p>고객센터: AM 10:00 ~ PM 6:00 | 전화번호: 02 123-9876</p>
+            <p>Copyright © 2024 TalkTalk All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // URL에서 쿼리 파라미터를 추출하는 함수
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const queryArray = queryString.split('&');
+            queryArray.forEach(function(param) {
+                const [key, value] = param.split('=');
+                params[key] = decodeURIComponent(value);
+            });
+            return params;
+        }
+
+        // 커뮤니티 항목별 게시판 제목 설정
+        function setBoardTitle(category) {
+            const boardTitle = document.getElementById('board-title');
+            switch (category) {
+                case 'free':
+                    boardTitle.textContent = '자유게시판';
+                    break;
+                case 'book_sale':
+                    boardTitle.textContent = '책 사고팔기';
+                    break;
+                case 'study_recruit':
+                    boardTitle.textContent = '스터디 모집';
+                    break;
+                default:
+                    boardTitle.textContent = '커뮤니티';
+            }
+        }
+
+        // 쿼리 파라미터를 가져와서 제목 설정
+        const params = getQueryParams();
+        if (params.category) {
+            setBoardTitle(params.category);
+        }
+
+        // 샘플 HTML 페이지로 이동하는 함수
+        function navigateToSample(id) {
+            const basePath = 'file:///Users/kimhojeong/Documents/GitHub/TalkTalk/';
+            window.location.href = `${basePath}sample2.html?id=${id}`;
+        }
+    </script>
+</body>
+</html>

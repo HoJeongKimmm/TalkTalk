@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>책 판매 게시글</title>
+    <link rel="stylesheet" href="CSS/style_sample.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="js/sample.js"></script> 
+</head>
+<body>
+    <header>
+        <nav class="main_menu">
+            <h1>
+                <a href="./main.html">TALKTALK</a>
+            </h1>
+            <ul id="gnb">
+                <li><a href="./main.html" id="home">Home</a></li>
+                <li class="dropdown">
+                    <a href="./main.html" id="lang">Study</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./study.html?lang=english">English</a></li>
+                        <li><a href="./study.html?lang=chinese">Chinese</a></li>
+                        <li><a href="./study.html?lang=japanese">Japanese</a></li>
+                        <li><a href="./study.html?lang=spanish">Spanish</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="./community.html?category=community" id="com">Community</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./community.html?category=free">자유게시판</a></li>
+                        <li><a href="./community.html?category=book_sale">책 사고팔기</a></li>
+                        <li><a href="./community.html?category=study_recruit">스터디 모집</a></li>
+                    </ul>
+                </li>
+                <li><a href="./about.html" id="about">About Us</a></li>
+                <li><a href="./login_sign.html" id="prof" class="signin">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Article List</h2>
+            <ul>
+                <li>sample data 1</li>
+                <li>sample data 2</li>
+                <li>sample data 3</li>
+                <li>sample data 4</li>
+                <li>sample data 5</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="article-content">
+                <h1>중고 서적 판매</h1>
+                <br>
+                <div class="article-body">
+                    <img src="img/book.jpeg" alt="book image" style="width: 300px; height: auto; float: left; margin-right: 20px;">
+                    <h2>안녕하세요, 중고 서적을 판매합니다.</h2>
+                    <br>
+                    <p>책 제목: 왕초보 일본어 회화 첫 걸음</p>
+                    <p>저자: 박해리</p>
+                    <p>출판사: OO 출판사</p>
+                    <p>출판년도: 2022</p>
+                    <p>상태: 양호</p>
+                    <p>가격: 8,000원</p>
+                    <p>연락처: 010-1234-5678</p>
+                    <br>
+                    <p>일본어 처음 배울 때 시작했던 책이에요.</p>
+                    <p>구매를 원하시는 분은 연락 부탁드립니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="inner">
+            <p>운영시간: 월 ~ 금 AM 9:00 ~ PM 7:00 | 점심시간: PM12:00 ~ PM 1:00</p>
+            <p>고객센터: AM 10:00 ~ PM 6:00 | 전화번호: 02 123-9876</p>
+            <p>Copyright © 2024 TalkTalk All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
